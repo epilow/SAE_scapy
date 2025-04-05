@@ -1,6 +1,6 @@
 # SAE 204 : Projet Intégratif
 
-La _**SAE** 24 ou 204 est un projet "intégratif"_, "intégratif" car elle nous pousse à mobiliser un bon nombre de compétence acquise lors des enseingnements précédent. La dure de cette SAE est d'environ 2 mois.
+La **SAE** 24 ou 204 est un projet "intégratif", "intégratif" car elle nous pousse à mobiliser un bon nombre de compétence acquise lors des enseingnements précédent. La dure de cette SAE est d'environ 2 mois.
 
 Cette SAE va se construire sous plusieurs phases dans lesquels nous devons réaliser de taches bien précise:
     - Phase 1: de prendre en main des outils spécifiques:
