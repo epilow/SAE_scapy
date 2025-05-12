@@ -16,3 +16,25 @@ ligne1 = text.readline()
 print("\n Voici le contenu du fichier 'text.txt' ligne 1 :")
 print(ligne1)
 
+#Pour lire le contenu du fichier en binaire, on utilise le mode binaire (b)
+fichier = open("Étape 3/text.txt", "rb")
+text= fichier.readlines()
+
+print("\n Voici les 5 premierère ligne du fichier 'text.txt' en binaire :")
+print(text[0:5])
+
+
+#Pour écrire dans un fichier, on utilise le mode write (w), écriture seulement (x), ajout (a)
+#Ouvre le fichier en mode ajout (a) et texte (t)
+fichier = open("Étape 3/text.txt", "at")
+
+#Écrit dans le fichier grâce à .write()
+fichier.write('\n"Got it memorized ?"')
+
+#Ouvre le fichier en mode lecture (r) et texte (t)
+fichier = open("Étape 3/text.txt", "rt")
+text = fichier.read()
+print("\n Voici le contenu du fichier 'text.txt' après ajout :")
+print(text)
+#Fermer la variable ou le fichier est ouvert
+fichier.close()
