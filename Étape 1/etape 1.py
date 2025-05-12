@@ -105,7 +105,7 @@ send(ping)
 trameping=Ether()/IP(dst='10.2.12.4')/ICMP()/"On peut ajouter ici des données à émettre avec le ping"
 sendp(trameping, iface="wlp19s0")
 
-ping=IP(dst='10.2.12.4')/ICMP()/"On peut ajouter ici des données à émettre avec le ping"
+ping=IP(dst='10.    2.12.4')/ICMP()/"On peut ajouter ici des données à émettre avec le ping"
 sr(ping)
 
 ping=IP(dst='10.2.12.4')/ICMP()/"On peut ajouter ici des données à émettre avec le ping"
