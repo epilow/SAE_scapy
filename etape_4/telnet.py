@@ -1,7 +1,7 @@
 from scapy.all import rdpcap, TCP, IP, Raw
 
 # Charger la capture
-packets = rdpcap("etape_4/telnet-total.pcapng")
+packets = rdpcap("Wireshark/telnet-total.pcapng")
 
 # Récupérer les paquets Telnet contenant des données
 telnet_packets = [
