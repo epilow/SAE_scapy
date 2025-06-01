@@ -1,0 +1,27 @@
+from scapy.all import *
+http = rdpcap("Wireshark/www-total.pcapng")
+
+def http_pcapng(packets):
+    for pkt in packets:
+        # On s'assure que le paquet contient les couches IP, TCP et Raw (payload)
+        if pkt.haslayer(IP) and pkt.haslayer(TCP) and pkt.haslayer(Raw):
+            payload = pkt[Raw].load.decode('utf-8', errors='ignore')
+            # On cherche dans le payload la ligne Authorization: Basic ...
+            for line in payload.split('\r\n'):
+                if line.lower().startswith('authorization: basic '):
+                    # Extraction de la chaîne base64
+                    b64_credentials = line.split(' ', 2)[2]
+                    try:
+                        decoded_bytes = base64.b64decode(b64_credentials)
+                        decoded_str = decoded_bytes.decode('utf-8', errors='ignore')
+                        # login:password
+                        if ':' in decoded_str:
+                            login, password = decoded_str.split(':', 1)
+                            print(f"Login : {login}")
+                            print(f"Mot de passe : {password}")
+                            return
+                    except Exception as e:
+                        print(f"Erreur décodage : {e}")
+                        continue
+
+http_pcapng(http)

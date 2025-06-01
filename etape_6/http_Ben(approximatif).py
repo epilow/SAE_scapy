@@ -2,7 +2,7 @@ from scapy.all import rdpcap, TCP, IP, Raw
 import base64
 
 # Charger le fichier de capture
-packets = rdpcap("etape_4/www-total.pcapng")
+packets = rdpcap("Wireshark/www-total.pcapng")
 
 # Fonction d'extraction des identifiants HTTP Basic
 def extract_http_credentials(payload):
