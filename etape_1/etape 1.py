@@ -4,7 +4,7 @@ from scapy.all import *
 print(f"{conf.version} est la version de Scapy.")
 
 #afficher l'interface réseau utilisée
-print(f"{conf.iface} est l'interface réseau utilisée.")
+print(f"{conf.iface.name} est l'interface réseau utilisée.")
 
 #afficher le nom de l'interface réseau utilisée
 #print(f"{conf.iface.name} est le nom de l'interface réseau utilisée.")
@@ -20,7 +20,7 @@ packet1 = IP()/UDP()
 print(f"Le résumé du paquet est: {packet1.summary()}")
 
 #afficher le contenu du paquet
-print(f"Le contenu du paquet est:")
+print(f"Le contenu du paquet est: {packet1.show()}")
 packet1.show()
 
 #définir les adresses IP source et destination
