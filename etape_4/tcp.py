@@ -2,7 +2,7 @@ from scapy.all import rdpcap, TCP, IP, Raw
 import re
 
 # Charger la capture réseau
-pcap_file = "etape_4/ftp.pcapng"
+pcap_file = "Wireshark/ftp.pcapng"
 packets = rdpcap(pcap_file)
 
 ftp_user = None
